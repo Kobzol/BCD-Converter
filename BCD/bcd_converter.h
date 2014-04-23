@@ -5,7 +5,7 @@
 
 class BCDConverter
 {
-private:
+public:
 	static std::string decToBin(int num, size_t bits);
 	static int binToDec(std::string num);
 

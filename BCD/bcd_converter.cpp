@@ -34,26 +34,17 @@ size_t BCDConverter::countSmallDigits(int num, size_t digits)
 {
 	size_t small_digits = 0;
 
-	if (num == 0)
+	for (size_t i = 0; i < digits; ++i)
 	{
-		small_digits = digits;
-	}
-	else
-	{
-		for (size_t i = 0; i < digits; ++i)
+		int digit = num % 10;
+
+		if (BCDConverter::isSmallDigit(digit))
 		{
-			int digit = num % 10;
-
-			if (BCDConverter::isSmallDigit(digit))
-			{
-				small_digits++;
-			}
-
-			num /= 10;
+			small_digits++;
 		}
+
+		num /= 10;
 	}
-
-
 
 	return small_digits;
 }

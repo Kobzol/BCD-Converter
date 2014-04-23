@@ -16,7 +16,6 @@ int main(int argc, char** argv)
 	cout << dpd << endl;
 	cout << BCDConverter::DecodeDPD(dpd) << endl;
 
-
 	system("pause");
 
 	return 0;
